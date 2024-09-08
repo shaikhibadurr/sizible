@@ -1,4 +1,4 @@
-import { BorderBottom } from "@mui/icons-material";
+import { BorderBottom, BorderRight } from "@mui/icons-material";
 import { Theme } from "@mui/material/styles";
 
 // ==============================|| OVERRIDES - MAIN ||============================== //
@@ -7,9 +7,11 @@ export default function ComponentsOverrides(theme: Theme) {
   return {
     MuiTabs: {
       styleOverrides: {
-        root: {},
+        root: {
+          overflow: "visible",
+        },
         flexContainer: {
-          background: theme.palette.background.default,
+          background: "none",
           justifyContent: "right",
         },
         indicator: {
@@ -24,11 +26,11 @@ export default function ComponentsOverrides(theme: Theme) {
           background: "#f4f4f4",
           borderTop: "1px solid #00000033",
           borderLeft: "1px solid #00000033",
+          borderBottom: "1px solid #00000033",
           borderRight: "none",
           "&:last-of-type": {
             borderRight: "1px solid #00000033",
           },
-          marginLeft: "-1px",
           borderRadius: "4px",
           fontWeight: 500,
           paddingLeft: 60,
@@ -40,14 +42,12 @@ export default function ComponentsOverrides(theme: Theme) {
             marginTop: "0",
             borderTop: "1px solid #00000033",
             borderLeft: "1px solid #00000033",
-            borderRight: "none",
-            marginBottom: "-1px",
+            borderRight: "1px solid #00000033",
+            borderBottom: "none",
             "&:last-of-type": {
               marginBottom: 0,
-              borderRight: 0,
               borderBottom: "1px solid #00000033",
             },
-            marginLeft: 0,
           },
           "&.Mui-selected": {
             marginTop: "0px",
@@ -57,8 +57,12 @@ export default function ComponentsOverrides(theme: Theme) {
             borderBottom: "none",
             borderTop: "1px solid #00000033",
             [theme.breakpoints.down("sm")]: {
-              borderBottom: "1px solid #00000033",
               borderRadius: "4px 0 0 4px",
+              borderRight: "none",
+              "&:last-of-type": {
+                marginBottom: 0,
+                borderBottom: "1px solid #00000033",
+              },
             },
           },
         },

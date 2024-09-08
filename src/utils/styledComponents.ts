@@ -8,6 +8,7 @@ export const BodyOutlet = styled(Box)(({ theme }) => ({
 export const TabBox = styled(Box)(({ theme }) => ({
   width: "100%",
   display: "flex",
+  flexGrow: 1,
   [theme.breakpoints.up("sm")]: {
     display: "unset",
   },

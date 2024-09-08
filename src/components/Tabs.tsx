@@ -16,13 +16,14 @@ interface TabPanelProps {
 function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
   return (
-    <div
+    <Box
       role="tabpanel"
       hidden={value !== index}
+      sx={style.tabPanel}
       {...other}
     >
-      {value === index && <Box sx={{ px: 3, py: 4 }}>{children}</Box>}
-    </div>
+      {value === index && <Box sx={style.tabPanelChildren}>{children}</Box>}
+    </Box>
   );
 }
 
@@ -48,7 +49,7 @@ export default function TabsComponent() {
         <Tab label={"Settings"} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        Item One
+        Item One Item One Item One Item One Item One Item One Item One Item One Item One Item One Item One Item One 
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
