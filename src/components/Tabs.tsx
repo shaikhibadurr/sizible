@@ -6,6 +6,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import { useTheme, useMediaQuery } from '@mui/material';
 import style from './style';
 import { TabBox } from '../utils/styledComponents';
+import Home from './home';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -43,13 +44,13 @@ export default function TabsComponent() {
   return (
     <TabBox>
       <Tabs orientation={isMdUp ? 'horizontal' : 'vertical'} value={value} onChange={handleChange}>
-        <Tab sx={style.paddingNone} icon={<HomeIcon color='primary' />} />
+        <Tab sx={style.paddingNone} icon={<HomeIcon sx={{color:'primary.light'}} />} />
         <Tab label={"Sizer"} />
         <Tab label={"Get the look"} />
         <Tab label={"Settings"} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        Item One Item One Item One Item One Item One Item One Item One Item One Item One Item One Item One Item One 
+        <Home />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two

@@ -9,7 +9,7 @@ const Typography = (fontFamily: string) => ({
   fontWeightBold: 600,
   h1: {
     fontWeight: 700,
-    fontSize: "3rem",
+    fontSize: "3.2rem",
   },
   h2: {
     fontWeight: 700,
@@ -21,7 +21,7 @@ const Typography = (fontFamily: string) => ({
   },
   h4: {
     fontWeight: 500,
-    fontSize: "1.125rem",
+    fontSize: "1.1rem",
   },
   h5: {
     fontWeight: 600,

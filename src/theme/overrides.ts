@@ -5,6 +5,25 @@ import { Theme } from "@mui/material/styles";
 
 export default function ComponentsOverrides(theme: Theme) {
   return {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: "10px",
+        },
+      },
+      defaultProps: {
+        disableElevation: true,
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: "10px",
+          borderColor: "#C1C1C1",
+          background: "#F4F4F4",
+        },
+      },
+    },
     MuiTabs: {
       styleOverrides: {
         root: {

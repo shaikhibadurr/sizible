@@ -18,6 +18,10 @@ const Palette = () => {
       },
       background: {
         default: "#dedede",
+        paper: "#00000033",
+      },
+      text: {
+        primary: "#3C3C3C",
       },
     },
   });
