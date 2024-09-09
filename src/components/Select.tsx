@@ -5,6 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { Typography } from '@mui/material';
+import style from './style';
 
 interface SelectInputProps {
   handleMouseEnter: () => void,
@@ -26,8 +27,8 @@ export default function SelectInput({ handleMouseEnter, handleMouseLeave, setIsH
   };
 
   return (
-    <Box onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} sx={{ position: 'absolute',right, top: `${inputTop}px`, minWidth: 120, background: '#F7F7F7', p: 0.6, pt: 0, borderRadius: 0.5 }}>
-      <Typography variant={'h6'} sx={{ color: 'black', fontWeight: 500 }} mb={0.2}>{label}</Typography>
+    <Box onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} sx={{right,top:inputTop,...style.selectBox}}>
+      <Typography variant={'h6'} sx={style.selectLabel} mb={0.2}>{label}</Typography>
       <FormControl fullWidth size="small">
         <InputLabel id="demo-simple-select-label">Select</InputLabel>
         <Select
@@ -36,7 +37,7 @@ export default function SelectInput({ handleMouseEnter, handleMouseLeave, setIsH
           value={selectValue}
           label="select"
           onChange={handleChange}
-          sx={{ background: 'white' }}
+          sx={style.bgWhite}
         >
           {selectArr.map((item: any, ind: number) => (
             <MenuItem key={ind} value={item.value}>{item.label}</MenuItem>))}

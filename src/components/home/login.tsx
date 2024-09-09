@@ -12,7 +12,7 @@ export default function Login() {
         <TextField sx={style.loginInputBg} id="password" label="password" variant="outlined" />
         <Stack direction={{xs:'column',sm:'row'}} spacing={1} justifyContent={'space-between'} alignItems={'center'}>
           <Typography variant="h4" sx={style.link} component={Link} underline='none' href='#'>Forgot password?</Typography>
-          <Button variant='contained' sx={{ paddingX: 4, paddingY: 1 }}>Login</Button>
+          <Button variant='contained' sx={style.loginBtn}>Login</Button>
         </Stack>
         <Stack py={3} alignItems={'center'}>
           <Divider sx={style.dividerWidth} />

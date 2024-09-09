@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import { MainTabs as Tabs } from '../utils/styledComponents';
+import { MainTab as Tab } from '../utils/styledComponents';
 import Box from '@mui/material/Box';
 import HomeIcon from '@mui/icons-material/Home';
 import { useTheme, useMediaQuery } from '@mui/material';
@@ -10,6 +10,7 @@ import Home from './home';
 import withStylists from '../utils/hoc/withStylists';
 import Sizer from './sizer';
 import Look from './look';
+import Settings from './settings';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -34,7 +35,7 @@ function TabPanel(props: TabPanelProps) {
 export default function TabsComponent() {
 
   // ==============================|| HOOKS ||============================== //
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState(3);
   const theme = useTheme();
   const isMdUp = useMediaQuery(theme.breakpoints.up('sm'));   // To make the tabs responsive
 
@@ -48,11 +49,12 @@ export default function TabsComponent() {
   const HomeWithStylists = withStylists(Home);
   const SizerWithStylists = withStylists(Sizer);
   const LookWithStylist = withStylists(Look);
+  const SettingsWithStylist = withStylists(Settings);
 
   return (
     <TabBox>
       <Tabs orientation={isMdUp ? 'horizontal' : 'vertical'} value={value} onChange={handleChange}>
-        <Tab sx={style.paddingNone} icon={<HomeIcon sx={{ color: 'primary.light' }} />} />
+        <Tab sx={style.paddingNone} icon={<HomeIcon sx={style.colorPrimaryLight} />} />
         <Tab label={"Sizer"} />
         <Tab label={"Get the look"} />
         <Tab label={"Settings"} />
@@ -67,7 +69,7 @@ export default function TabsComponent() {
         <LookWithStylist/>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Three
+        <SettingsWithStylist/>
       </TabPanel>
     </TabBox>
   );

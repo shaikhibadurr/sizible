@@ -18,10 +18,10 @@ export default function Look() {
           <Button variant='outlined'>
             <Stack direction={'row'} spacing={3} alignItems={'center'}>
               <Stack>
-                <Typography variant='h2' sx={{ fontWeight: 600, textTransform: 'initial' }}>Download App</Typography>
+                <Typography variant='h2' sx={style.lookBtnHead}>Download App</Typography>
               </Stack>
               <Stack spacing={0.5}>
-                <Typography variant='h5' sx={{ color: 'black', fontWeight: 400, textTransform: 'lowercase' }}>available on</Typography>
+                <Typography variant='h5' sx={style.lookBtn}>available on</Typography>
                 <Stack direction={'row'} spacing={2}>
                   <img src='assets/images/appstore.png' />
                   <img src='assets/images/playstore.png' />
