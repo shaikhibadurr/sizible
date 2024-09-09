@@ -44,6 +44,7 @@ const style = {
   link: { fontWeight: 400, color: "#868686" },
   joinBtn: { background: "#F0F0F0", px: 2 },
   dividerWidth: { width: "70%" },
+  loginInputBg: { background: "#F4F4F4" },
 };
 
 export default style;

@@ -8,8 +8,8 @@ export default function Login() {
     <Grid>
       <Stack spacing={3}>
         <Typography variant="h3" sx={style.centerText}>Login / Sign up</Typography>
-        <TextField id="email" label="Enter email address" variant="outlined" />
-        <TextField id="password" label="password" variant="outlined" />
+        <TextField sx={style.loginInputBg} id="email" label="Enter email address" variant="outlined" />
+        <TextField sx={style.loginInputBg} id="password" label="password" variant="outlined" />
         <Stack direction={{xs:'column',sm:'row'}} spacing={1} justifyContent={'space-between'} alignItems={'center'}>
           <Typography variant="h4" sx={style.link} component={Link} underline='none' href='#'>Forgot password?</Typography>
           <Button variant='contained' sx={{ paddingX: 4, paddingY: 1 }}>Login</Button>

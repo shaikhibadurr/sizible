@@ -20,7 +20,6 @@ export default function ComponentsOverrides(theme: Theme) {
         root: {
           borderRadius: "10px",
           borderColor: "#C1C1C1",
-          background: "#F4F4F4",
         },
       },
     },

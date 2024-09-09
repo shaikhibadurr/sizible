@@ -8,6 +8,8 @@ import style from './style';
 import { TabBox } from '../utils/styledComponents';
 import Home from './home';
 import withStylists from '../utils/hoc/withStylists';
+import Sizer from './sizer';
+import Look from './look';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -32,7 +34,7 @@ function TabPanel(props: TabPanelProps) {
 export default function TabsComponent() {
 
   // ==============================|| HOOKS ||============================== //
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
   const theme = useTheme();
   const isMdUp = useMediaQuery(theme.breakpoints.up('sm'));   // To make the tabs responsive
 
@@ -44,6 +46,8 @@ export default function TabsComponent() {
 
   // ==============================|| TABS COMPONENT` ||============================== //
   const HomeWithStylists = withStylists(Home);
+  const SizerWithStylists = withStylists(Sizer);
+  const LookWithStylist = withStylists(Look);
 
   return (
     <TabBox>
@@ -57,10 +61,10 @@ export default function TabsComponent() {
         <HomeWithStylists />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <SizerWithStylists/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <LookWithStylist/>
       </TabPanel>
       <TabPanel value={value} index={3}>
         Item Three

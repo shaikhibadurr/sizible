@@ -13,7 +13,7 @@ const Typography = (fontFamily: string) => ({
   },
   h2: {
     fontWeight: 700,
-    fontSize: "2.5rem",
+    fontSize: "2rem",
   },
   h3: {
     fontWeight: 600,
