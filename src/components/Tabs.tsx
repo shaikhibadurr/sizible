@@ -35,7 +35,7 @@ function TabPanel(props: TabPanelProps) {
 export default function TabsComponent() {
 
   // ==============================|| HOOKS ||============================== //
-  const [value, setValue] = React.useState(3);
+  const [value, setValue] = React.useState(0);
   const theme = useTheme();
   const isMdUp = useMediaQuery(theme.breakpoints.up('sm'));   // To make the tabs responsive
 

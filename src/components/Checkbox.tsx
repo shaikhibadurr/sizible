@@ -1,5 +1,4 @@
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 import { CustomCheckbox } from '../utils/styledComponents';
 import { FormControlLabel, Stack, Typography } from '@mui/material';
 
